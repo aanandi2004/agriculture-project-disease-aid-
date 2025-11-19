@@ -1,6 +1,6 @@
 # 🌾 AI-Powered Crop Disease Detection & Weather-Aware Treatment System
 
-AgriAid is an AI-based crop disease detection system that uses deep learning models to classify plant diseases from images of leaves.  
+This is an AI-based crop disease detection system that uses deep learning models to classify plant diseases from images of leaves.  
 It also provides **organic & chemical treatments**, **prevention methods**, and **weather-aware recommendations** using real-time weather APIs.
 
 This system currently supports:
@@ -74,3 +74,66 @@ Copy code
 ```bash
 git clone https://github.com/YOUR_USERNAME/agraid.git
 cd agraid/api
+2️⃣ Create a Virtual Environment
+bash
+Copy code
+python -m venv venv
+venv\Scripts\activate       # Windows
+3️⃣ Install Dependencies
+bash
+Copy code
+pip install -r requirements.txt
+🔑 Environment Variables
+Create a file named .env inside api/:
+
+ini
+Copy code
+WEATHER_API_KEY=your_openweather_api_key_here
+⚠️ Never upload .env to GitHub (it is already in .gitignore).
+
+▶️ Running the Backend
+bash
+Copy code
+uvicorn main:app --reload
+Now open:
+
+➤ API Docs: http://127.0.0.1:8000/docs
+➤ Health check: http://127.0.0.1:8000/ping
+
+🧪 API Endpoints
+POST /predict
+Predict disease from a leaf image.
+
+GET /treatment/{disease}
+Get organic + chemical + prevention treatment.
+
+GET /weather-advice
+Get weather-based recommendation for spraying.
+
+🌐 Deployment
+Recommended backend hosting options:
+
+Railway.app (best for FastAPI)
+
+Render.com
+
+Deta Space
+
+Azure/AWS/GCP (advanced)
+
+Frontend can be hosted on:
+
+Vercel
+
+Netlify
+
+GitHub Pages
+
+NOTE: Your .keras models MUST be uploaded to cloud storage (Google Drive, AWS S3, etc.) if host memory is small.
+
+📜 License
+MIT License © 2025 YOUR NAME
+
+👨‍💻 Author
+Developed by Aarya and Aditya
+For academic + real-world agricultural applications.
