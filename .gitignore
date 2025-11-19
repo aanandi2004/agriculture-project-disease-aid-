@@ -1,0 +1,64 @@
+# ============================
+# PYTHON & FASTAPI BACKEND
+# ============================
+
+# Environment variables
+.env
+.env.*
+*.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment folders
+venv/
+env/
+.venv/
+ENV/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Machine Learning models
+*.keras
+*.h5
+*.hdf5
+*.pkl
+*.sav
+*.joblib
+
+# Logs
+*.log
+
+# IDE settings
+.vscode/
+.idea/
+
+# ============================
+# FRONTEND (REACT)
+# ============================
+
+# Node modules
+frontend/node_modules/
+node_modules/
+
+# Build files
+frontend/dist/
+frontend/build/
+
+# Local development files
+*.local
+*.cache
+
+# ============================
+# OS FILES
+# ============================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
