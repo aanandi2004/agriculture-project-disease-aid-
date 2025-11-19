@@ -1,4 +1,4 @@
-# 🌾 AgriAid – AI-Powered Crop Disease Detection & Weather-Aware Treatment System
+# 🌾 AI-Powered Crop Disease Detection & Weather-Aware Treatment System
 
 AgriAid is an AI-based crop disease detection system that uses deep learning models to classify plant diseases from images of leaves.  
 It also provides **organic & chemical treatments**, **prevention methods**, and **weather-aware recommendations** using real-time weather APIs.
@@ -48,3 +48,29 @@ Fast, scalable API with endpoints:
 
 ## 📂 Project Structure
 
+project/
+│── api/
+│ ├── main.py # FastAPI backend
+│ ├── treatments.py # Disease treatments database
+│ ├── .env # API keys (NOT pushed to GitHub)
+│ ├── requirements.txt # Dependencies
+│
+│── saved_models/ # All .keras models (ignored in Git)
+│
+│── frontend/ # Web app / UI (React or HTML)
+│
+│── training/ # Jupyter notebooks & training code
+│
+└── README.md
+
+yaml
+Copy code
+
+---
+
+## 🔧 Installation
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/YOUR_USERNAME/agraid.git
+cd agraid/api
