@@ -1,235 +1,239 @@
+# treatments.py
+
 treatments = {
 
-    # ==============================
-    # POTATO
-    # ==============================
-    "potato": {
-        "early_blight": {
-            "organic": [{
-                "cure": "Neem oil spray, Bacillus subtilis products, or botanicals like garlic extract.",
-                "dosage": "Neem oil: 2-4 ml per liter, weekly.",
-                "prevention": "Rotate crops, remove infected foliage, avoid overhead irrigation."
-            }],
-            "chemical": [{
-                "cure": "Chlorothalonil, Mancozeb, Azoxystrobin combinations.",
-                "dosage": "Chlorothalonil: 2g/L; Mancozeb: 2.5g/L.",
-                "prevention": "Apply preventatively during warm/humid periods."
-            }],
-            "weather_rules": {
-                "heavy_rain_mm": 10,
-                "humidity_high_pct": 85
-            }
-        },
+# ============================================================
+# POTATO
+# ============================================================
+"potato": {
 
-        "late_blight": {
-            "organic": [{
-                "cure": "Copper fungicides or compost tea.",
-                "dosage": "Copper oxychloride: 0.9 lbs elemental copper/acre.",
-                "prevention": "Plant resistant varieties; improve airflow."
-            }],
-            "chemical": [{
-                "cure": "Mancozeb, Chlorothalonil.",
-                "dosage": "Mancozeb: 2.5g/L every 10–14 days.",
-                "prevention": "Maintain regular spray intervals."
-            }],
-            "weather_rules": {
-                "heavy_rain_mm": 8,
-                "humidity_high_pct": 90
-            }
-        },
-
-        "healthy": {
-            "organic": [{"cure": "No treatment needed.", "dosage": "-", "prevention": "Maintain monitoring."}],
-            "chemical": [{"cure": "-", "dosage": "-", "prevention": "-"}],
-            "weather_rules": {}
+    "early_blight": {
+        "organic": [{
+            "cure": "Neem oil spray, Bacillus subtilis, garlic extract solution.",
+            "dosage": "Neem oil: 2-4 ml/L water, spray weekly.",
+            "prevention": "Rotate crops, remove infected leaves, avoid overhead watering."
+        }],
+        "chemical": [{
+            "cure": "Chlorothalonil, Mancozeb, Azoxystrobin.",
+            "dosage": "Chlorothalonil: 2g/L, Mancozeb: 2.5g/L.",
+            "prevention": "Apply preventatively during humid weather."
+        }],
+        "weather_rules": {
+            "heavy_rain_mm": 10,
+            "humidity_high_pct": 85
         }
     },
 
-    # ==============================
-    # TOMATO (placeholder)
-    # ==============================
-    "tomato": {
-        "tomato_bacterial_spot": { ... },
-        "tomato_early_blight": { ... },
-        "tomato_late_blight": { ... },
-        "tomato_leaf_mold": { ... },
-        "tomato_septoria_leaf_spot": { ... },
-        "tomato_spider_mites_two_spotted_spider_mite": { ... },
-        "tomato_target_spot": { ... },
-        "tomato_tomato_yellowleaf_curl_virus": { ... },
-        "tomato_tomato_mosaic_virus": { ... },
-        "tomato_healthy": { ... }
-    },
-
-    # ==============================
-    # PEPPER
-    # ==============================
-    "pepper": {
-        "pepper__bell_bacterial_spot": { ... },
-        "pepper__bell_healthy": { ... }
-    },
-
-    # ==============================
-    # RICE (weather-aware)
-    # ==============================
-    "rice": {
-        "bacterial_leaf_blight": {
-            "organic": [{
-                "cure": "Improve drainage, remove infected plants, apply neem extract.",
-                "dosage": "Neem extract: 3ml/L.",
-                "prevention": "Use resistant varieties; avoid stagnant water."
-            }],
-            "chemical": [{
-                "cure": "Streptocycline + Copper oxychloride",
-                "dosage": "Streptocycline: 1g/10L; Copper oxychloride: 3g/L.",
-                "prevention": "Apply at first symptoms; maintain field sanitation."
-            }],
-            "weather_rules": {
-                "heavy_rain_mm": 20,
-                "humidity_high_pct": 80
-            }
-        },
-
-        "bacterial_leaf_streak": {
-            "organic": [{
-                "cure": "Use disease-free seeds, field sanitation.",
-                "dosage": "-",
-                "prevention": "Keep nitrogen under recommended levels."
-            }],
-            "chemical": [{
-                "cure": "Copper fungicides.",
-                "dosage": "Follow label.",
-                "prevention": "Alternate fungicides to avoid resistance."
-            }],
-            "weather_rules": {
-                "heavy_rain_mm": 15,
-                "humidity_high_pct": 85
-            }
-        },
-
-        "bacterial_panicle_blight": {
-            "organic": [{
-                "cure": "Improve field drainage and fertilizer balance.",
-                "dosage": "-",
-                "prevention": "Avoid excessive nitrogen."
-            }],
-            "chemical": [{
-                "cure": "No fully effective chemical cure.",
-                "dosage": "-",
-                "prevention": "Use resistant varieties."
-            }],
-            "weather_rules": {
-                "heavy_rain_mm": 12,
-                "humidity_high_pct": 85
-            }
-        },
-
-        "blast": {
-            "organic": [{
-                "cure": "Maintain flooding until booting stage.",
-                "dosage": "-",
-                "prevention": "Use silicon fertilizers."
-            }],
-            "chemical": [{
-                "cure": "Tricyclazole or Isoprothiolane.",
-                "dosage": "Tricyclazole: 0.6g/L.",
-                "prevention": "Spray at first signs."
-            }],
-            "weather_rules": {
-                "heavy_rain_mm": 8,
-                "humidity_high_pct": 90
-            }
-        },
-
-        "brown_spot": {
-            "organic": [{
-                "cure": "Apply farmyard manure and compost.",
-                "dosage": "-",
-                "prevention": "Avoid nutrient deficiency."
-            }],
-            "chemical": [{
-                "cure": "Propiconazole or Mancozeb.",
-                "dosage": "As per label.",
-                "prevention": "Repeat in 10-day intervals."
-            }],
-            "weather_rules": {
-                "heavy_rain_mm": 10,
-                "humidity_high_pct": 85
-            }
-        },
-
-        "dead_heart": {
-            "organic": [{
-                "cure": "Use neem-based sprays.",
-                "dosage": "Neem oil: 3ml/L.",
-                "prevention": "Encourage natural predators."
-            }],
-            "chemical": [{
-                "cure": "Chlorpyrifos (for larvae).",
-                "dosage": "As per label.",
-                "prevention": "Apply when threshold exceeds limits."
-            }],
-            "weather_rules": {
-                "heavy_rain_mm": 20,
-                "humidity_high_pct": 75
-            }
-        },
-
-        "downy_mildew": {
-            "organic": [{
-                "cure": "Improve aeration and drainage.",
-                "dosage": "-",
-                "prevention": "Avoid overcrowding."
-            }],
-            "chemical": [{
-                "cure": "Metalaxyl + Mancozeb.",
-                "dosage": "As per label.",
-                "prevention": "Spray early in disease cycle."
-            }],
-            "weather_rules": {
-                "heavy_rain_mm": 12,
-                "humidity_high_pct": 80
-            }
-        },
-
-        "hispa": {
-            "organic": [{
-                "cure": "Hand-pick larvae, apply neem extracts.",
-                "dosage": "-",
-                "prevention": "Encourage parasitoids."
-            }],
-            "chemical": [{
-                "cure": "Lambda-cyhalothrin.",
-                "dosage": "As per label.",
-                "prevention": "Monitor larvae regularly."
-            }],
-            "weather_rules": {
-                "heavy_rain_mm": 18,
-                "humidity_high_pct": 75
-            }
-        },
-
-        "normal": {
-            "organic": [{"cure": "No treatment needed.", "dosage": "-", "prevention": "Continue monitoring."}],
-            "chemical": [{"cure": "-", "dosage": "-", "prevention": "-"}],
-            "weather_rules": {}
-        },
-
-        "tungro": {
-            "organic": [{
-                "cure": "Remove infected plants; use resistant varieties.",
-                "dosage": "-",
-                "prevention": "Control green leaf hopper vector."
-            }],
-            "chemical": [{
-                "cure": "Imidacloprid for vector control.",
-                "dosage": "Follow label.",
-                "prevention": "Plant early to avoid vector build up."
-            }],
-            "weather_rules": {
-                "heavy_rain_mm": 10,
-                "humidity_high_pct": 80
-            }
+    "late_blight": {
+        "organic": [{
+            "cure": "Copper fungicide or compost tea spray.",
+            "dosage": "Copper oxychloride: 2.5g/L.",
+            "prevention": "Improve airflow and remove infected plants."
+        }],
+        "chemical": [{
+            "cure": "Mancozeb or Chlorothalonil.",
+            "dosage": "Mancozeb: 2.5g/L every 10 days.",
+            "prevention": "Maintain consistent spray schedule."
+        }],
+        "weather_rules": {
+            "heavy_rain_mm": 8,
+            "humidity_high_pct": 90
         }
+    },
+
+    "healthy": {
+        "organic": [{"cure": "No treatment required.", "dosage": "-", "prevention": "Continue regular monitoring."}],
+        "chemical": [{"cure": "-", "dosage": "-", "prevention": "-"}],
+        "weather_rules": {}
     }
+},
+
+# ============================================================
+# TOMATO
+# ============================================================
+"tomato": {
+
+    "tomato_bacterial_spot": {
+        "organic": [{
+            "cure": "Neem oil spray and copper-based biofungicide.",
+            "dosage": "Neem oil: 3ml/L weekly.",
+            "prevention": "Use certified seeds and avoid leaf wetting."
+        }],
+        "chemical": [{
+            "cure": "Copper hydroxide or Streptomycin.",
+            "dosage": "As per label.",
+            "prevention": "Rotate crops and apply at first symptoms."
+        }],
+        "weather_rules": {"heavy_rain_mm": 12, "humidity_high_pct": 80}
+    },
+
+    "tomato_early_blight": {
+        "organic": [{
+            "cure": "Neem oil or compost tea spray.",
+            "dosage": "Neem oil: 3ml/L every 7 days.",
+            "prevention": "Proper spacing and pruning."
+        }],
+        "chemical": [{
+            "cure": "Mancozeb or Difenoconazole.",
+            "dosage": "As per instructions.",
+            "prevention": "Prevent during humid periods."
+        }],
+        "weather_rules": {"heavy_rain_mm": 10, "humidity_high_pct": 85}
+    },
+
+    "tomato_late_blight": {
+        "organic": [{
+            "cure": "Copper fungicide spray.",
+            "dosage": "2g/L weekly.",
+            "prevention": "Improve ventilation."
+        }],
+        "chemical": [{
+            "cure": "Metalaxyl or Mancozeb.",
+            "dosage": "As per label.",
+            "prevention": "Spray early."
+        }],
+        "weather_rules": {"heavy_rain_mm": 8, "humidity_high_pct": 90}
+    },
+
+    "tomato_leaf_mold": {
+        "organic": [{
+            "cure": "Baking soda spray.",
+            "dosage": "5g/L water weekly.",
+            "prevention": "Improve air flow."
+        }],
+        "chemical": [{
+            "cure": "Chlorothalonil.",
+            "dosage": "2g/L.",
+            "prevention": "Maintain leaf dryness."
+        }],
+        "weather_rules": {"heavy_rain_mm": 8, "humidity_high_pct": 85}
+    },
+
+    "tomato_septoria_leaf_spot": {
+        "organic": [{
+            "cure": "Neem oil spray.",
+            "dosage": "3ml/L weekly.",
+            "prevention": "Remove leaf debris."
+        }],
+        "chemical": [{
+            "cure": "Mancozeb.",
+            "dosage": "2.5g/L.",
+            "prevention": "Preventative spraying."
+        }],
+        "weather_rules": {"heavy_rain_mm": 10, "humidity_high_pct": 85}
+    },
+
+    "tomato_spider_mites_two_spotted_spider_mite": {
+        "organic": [{
+            "cure": "Neem oil or insecticidal soap.",
+            "dosage": "3ml/L twice a week.",
+            "prevention": "Keep humidity high."
+        }],
+        "chemical": [{
+            "cure": "Abamectin.",
+            "dosage": "As per label.",
+            "prevention": "Monitor weekly."
+        }],
+        "weather_rules": {"heavy_rain_mm": 15, "humidity_high_pct": 70}
+    },
+
+    "tomato_target_spot": {
+        "organic": [{
+            "cure": "Copper spray.",
+            "dosage": "2g/L weekly.",
+            "prevention": "Avoid contaminated soil."
+        }],
+        "chemical": [{
+            "cure": "Azoxystrobin.",
+            "dosage": "As per instructions.",
+            "prevention": "Rotate fungicides."
+        }],
+        "weather_rules": {"heavy_rain_mm": 10, "humidity_high_pct": 80}
+    },
+
+    "tomato_tomato_yellowleaf_curl_virus": {
+        "organic": [{
+            "cure": "Neem oil and remove infected plants.",
+            "dosage": "3ml/L weekly.",
+            "prevention": "Control whiteflies."
+        }],
+        "chemical": [{
+            "cure": "Imidacloprid for vector control.",
+            "dosage": "As per label.",
+            "prevention": "Use resistant varieties."
+        }],
+        "weather_rules": {"heavy_rain_mm": 10, "humidity_high_pct": 80}
+    },
+
+    "tomato_tomato_mosaic_virus": {
+        "organic": [{
+            "cure": "Remove infected plants.",
+            "dosage": "-",
+            "prevention": "Sterilise tools."
+        }],
+        "chemical": [{
+            "cure": "No chemical cure.",
+            "dosage": "-",
+            "prevention": "Virus-free seedlings."
+        }],
+        "weather_rules": {}
+    },
+
+    "tomato_healthy": {
+        "organic": [{"cure": "No treatment needed.", "dosage": "-", "prevention": "Maintain plant health."}],
+        "chemical": [{"cure": "-", "dosage": "-", "prevention": "-"}],
+        "weather_rules": {}
+    }
+},
+
+# ============================================================
+# PEPPER
+# ============================================================
+"pepper": {
+
+    "pepper__bell_bacterial_spot": {
+        "organic": [{
+            "cure": "Neem oil and garlic extract spray.",
+            "dosage": "3ml/L weekly.",
+            "prevention": "Avoid wet foliage."
+        }],
+        "chemical": [{
+            "cure": "Copper fungicide.",
+            "dosage": "As per label.",
+            "prevention": "Clean tools regularly."
+        }],
+        "weather_rules": {"heavy_rain_mm": 10, "humidity_high_pct": 80}
+    },
+
+    "pepper__bell_healthy": {
+        "organic": [{"cure": "No treatment required.", "dosage": "-", "prevention": "Keep monitoring."}],
+        "chemical": [{"cure": "-", "dosage": "-", "prevention": "-"}],
+        "weather_rules": {}
+    }
+},
+
+# ============================================================
+# RICE
+# ============================================================
+"rice": {
+    "bacterial_leaf_blight": {
+        "organic": [{
+            "cure": "Neem extract and remove infected plants.",
+            "dosage": "3ml/L water.",
+            "prevention": "Use resistant varieties."
+        }],
+        "chemical": [{
+            "cure": "Streptocycline + Copper oxychloride.",
+            "dosage": "1g/10L + 3g/L.",
+            "prevention": "Apply early."
+        }],
+        "weather_rules": {"heavy_rain_mm": 20, "humidity_high_pct": 80}
+    },
+
+    "normal": {
+        "organic": [{"cure": "No treatment needed.", "dosage": "-", "prevention": "Continue monitoring."}],
+        "chemical": [{"cure": "-", "dosage": "-", "prevention": "-"}],
+        "weather_rules": {}
+    }
+}
 }
