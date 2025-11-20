@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pillow
+tensorflow==2.17.0
+numpy
+python-multipart
+python-dotenv
+requests
