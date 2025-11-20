@@ -16,7 +16,7 @@ import tensorflow as tf
 from tensorflow.keras.applications.efficientnet_v2 import preprocess_input
 
 # local treatments.py (your file)
-from treatments import treatments
+from api.treatments import treatments
 
 # -----------------------
 # Config + logging
